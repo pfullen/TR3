@@ -53,3 +53,4 @@ gem 'cocoon'
 gem 'bootstrap-datepicker-rails', '~>1.6.4.1'
 
 gem 'rails_12factor' , group: :production
+gem 'faker' , group: :production 
