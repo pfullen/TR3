@@ -98,7 +98,7 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 
-  config.action_controlle.asset_host = 'http://' + Figaro.env.hostname
+ # config.action_controlle.asset_host = 'http://' + Figaro.env.hostname
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
