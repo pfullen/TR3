@@ -1,0 +1,38 @@
+
+<%= simple_form_for @project, class: "form-horizontal" do |f| %>
+
+	<% if @project.errors.any? %>
+		<% @project.errors.full_messages.each do |error| %>
+			<%= js add_gritter(error, title: "Overtime App Notification", sticky: false) %>
+		<% end %>
+	<% end %>
+
+  
+  	<%= f.input :company, collection: ['Tab Retail', 'TRS', 'Ridge Line', 'Store Force'], as: :radio_buttons%>	
+  	   <%= f.input :project_type, collection: ["Newstore", "Remodel", "Resteel", 
+        "Special project", "Backroom_SP", "SP_Project_ELS", "SP_Project_FET", 
+        "Bike_Rack_SP", "Tire_Mezz"], prompt: "Select Project Type" , label: false%>
+
+       <%= f.input :client , collection: ["Walmart", "Sams", "Macys", "Publix", 
+        "Office Depot", "Burlington"], prompt: "Select Client", label: false %>
+       <%= f.input :store_num %>
+       <%= f.input :address %>
+       <%= f.input :city %>
+       <%= f.association :states,  label_method: :state_name, prompt: "Select State" %>
+       <%= f.input :invoice_to %>
+       <%= f.input :project_manager %>
+        <%= f.input :site_manager %>
+       <%= f.input :status , collection: ["Pending", "Open", "Closed"], prompt: "Select Status"%>
+       <%= f.input :billing %>
+       <%= f.label :start_date %>
+       <%= f.date_field :start_date , class: 'form-control datepicker',:date => {:provide => 'datepicker'}, prompt: "YY/MM/DD" %> 
+      <%= f.label :end_date %>
+       <%= f.date_field   :end_date , class: 'form-control datepicker',:date => {:provide => 'datepicker'}, prompt: "YY/MM/DD" %> 
+       <%= f.input :num_of_employees, input_html: {min: '1', step: 'any'} %>
+       <%= f.input :num_of_shifts , input_html: {min: '1', step: 'any'}%>
+       <%= f.button :submit %>
+
+   
+ <% end %>
+
+

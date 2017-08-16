@@ -1,0 +1,57 @@
+<div class = "panel panel-primary form-panel project">
+
+
+<div class="panel-heading"> <%= @roster.project.project_name  %> </div>
+
+ <%= @roster.project.num_of_shifts.times do ||%>
+
+<table class = "table table-striped table-hover">
+  <thead>
+    <tr>
+      
+      <th>Employee</th>
+      <th>Phone</th>
+      <th> Per Diem </th>
+      <th> Expense Code </th>
+      <th> Shift </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+
+
+<% for list in @roster.roster_lists.order(:shift_id)%>
+
+
+
+
+  <div class="panel-body">
+
+<tr>
+<td> <%= list.employee.full_name %> </td>
+<td> <%= list.employee.phone %> </td>
+<td> <%= list.perdiem%> </td>
+<td> <%= list.expense_code %> </td>
+<td> <%= list.shift_id %> </td>
+</tr>
+<% end %>
+
+
+ </tbody>
+</table>
+<%= end %> 
+<td><%= link_to 'Add Employee',    new_roster_roster_list_path(@roster) %></td>
+
+<td><%= link_to 'Back to Project',    project_path(@roster.project) %></td>
+
+				      
+         </div>
+</div>
+</div>
+
+
+
+
+         

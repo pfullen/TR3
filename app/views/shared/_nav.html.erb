@@ -1,0 +1,209 @@
+<div class = 'logo'>
+	<%= image_tag 'tab_logo_main.png' %> 
+	
+</div> 
+
+
+<ul class="custom-nav nav nav-tabs">
+	<li class="<%= active?(root_path) %>">
+		<%= link_to "Home", root_path %>
+	</li>
+
+	<li class="<%= active?(new_project_path) %>">
+		<%= link_to "Add Project", new_project_path %>
+	</li>
+	
+<li class="dropdown">
+
+		 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Tab Retail<strong class="caret"></strong></a>
+		<ul class="dropdown-menu">
+			<li>
+				<%= link_to "New Store", new_store_path %>
+			</li>
+
+			
+			
+			<li>
+				<%= link_to "Remodel", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Resteel", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Special Project", "" %>
+			</li>
+<li>
+				<%= link_to "Backroom SP", "" %>
+			</li>
+
+			<li>
+				<%= link_to "ELS", els_path %>
+			</li>
+
+<li>
+				<%= link_to "FET", fet_path %>
+			</li>
+
+			<li>
+				<%= link_to "Bike Rack SP", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Tire Mezz", "" %>
+			</li>
+			
+		</ul>
+	</li>
+
+
+<li class="dropdown">
+		 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Ridgeline<strong class="caret"></strong></a>
+		<ul class="dropdown-menu">
+			<li>
+				<%= link_to "New Store", root_path %>
+			</li>
+
+			
+			
+			<li>
+				<%= link_to "Remodel", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Resteel", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Special Project", "" %>
+			</li>
+<li>
+				<%= link_to "Backroom SP", "" %>
+			</li>
+
+			<li>
+				<%= link_to "ELS", "" %>
+			</li>
+
+<li>
+				<%= link_to "FET", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Bike Rack SP", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Tire Mezz", "" %>
+			</li>
+			
+		</ul>
+	</li>
+
+<li class="dropdown">
+		 <a href="#" data-toggle="dropdown" class="dropdown-toggle">TRS<strong class="caret"></strong></a>
+		<ul class="dropdown-menu">
+			<li>
+				<%= link_to "New Store", root_path %>
+			</li>
+
+			
+			
+			<li>
+				<%= link_to "Remodel", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Resteel", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Special Project", "" %>
+			</li>
+<li>
+				<%= link_to "Backroom SP", "" %>
+			</li>
+
+			<li>
+				<%= link_to "ELS", "" %>
+			</li>
+
+<li>
+				<%= link_to "FET", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Bike Rack SP", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Tire Mezz", "" %>
+			</li>
+			
+		</ul>
+	</li>
+
+	<li class="dropdown">
+		 <a href="#" data-toggle="dropdown" class="dropdown-toggle">StoreForce<strong class="caret"></strong></a>
+		<ul class="dropdown-menu">
+			<li>
+				<%= link_to "New Store", root_path %>
+			</li>
+
+			
+			
+			<li>
+				<%= link_to "Remodel", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Resteel", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Special Project", "" %>
+			</li>
+<li>
+				<%= link_to "Backroom SP", "" %>
+			</li>
+
+			<li>
+				<%= link_to "ELS", "" %>
+			</li>
+
+<li>
+				<%= link_to "FET", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Bike Rack SP", "" %>
+			</li>
+
+			<li>
+				<%= link_to "Tire Mezz", "" %>
+			</li>
+			
+		</ul>
+	</li>
+
+
+
+
+	<li class="dropdown pull-right">
+		 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+		 <i class='glyphicon glyphicon-cog'> </i>	<strong class="caret"></strong></a>
+		<ul class="dropdown-menu">
+			<li>
+				<%= link_to "Admin Dashboard", "" %>
+			</li>
+
+			
+			<li class="divider">
+			</li>
+			<li>
+				<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+			</li>
+		</ul>
+	</li>
+</ul>

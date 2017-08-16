@@ -1,0 +1,65 @@
+  
+<table class ="table-striped table-hover roster-info-table">
+  <thead>
+<tr>
+				
+				  <th colspan="3"></th>
+				  <th> </th>
+				  <th> </th>
+				  <th> </th>
+				</tr>
+				</thead>
+
+				<tbody class="roster">
+				<% @project.rosters.each do |roster| %>
+
+				  <tr id="roster-header">
+			       
+             
+				    <td > <strong> Week of: <%=roster.week.strftime('%m/%d/%Y') %> </strong></td>
+				    <td> Roster ID:  <%= roster.id  %>    </td>
+				    
+				    <td> <%= link_to "<i class='glyphicon glyphicon-pencil roster-glyphicon' > </i>".html_safe, edit_roster_path(roster) %> </td>
+
+				    <td> <%= link_to "<i class='glyphicon glyphicon-copy roster-glyphicon' > </i>".html_safe, copy_roster_list_path(roster) %> </td>
+
+    
+            <td> </td>
+  <td> </td>
+    <td> </td>
+          </tr>
+  
+
+				    
+			    <thead class = "roster-detail-info">
+
+
+				    <tr>
+				    	<th>Name </th>
+				      <th> Phone </th>
+				      <th> Per Diem </th>
+				      <th> Exp Code </th>
+				      <th> Shift </th>
+				     </tr>
+           </thead>
+				  		<% roster.roster_lists.each do |list| %>
+              <tbody class = "roster-detail-info">
+				        <tr>
+				        	
+				        	<td> <%= list.employee.full_name %> </td>
+				        	<td> <%= list.employee.phone %> </td>
+
+				        	<td> <%= list.perdiem %> </td>
+				        	<td> <%= list.expense_code%> </td>
+				        	<td> <%= list.shift_id%> </td>
+
+				        </tr>
+				       
+
+                <tbody>
+							
+				        <% end %>
+				      
+
+				        <% end %> 
+				    </table>

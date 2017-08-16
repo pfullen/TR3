@@ -1,0 +1,2 @@
+class SiteManager < Contact
+end

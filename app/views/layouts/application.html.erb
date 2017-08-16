@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Tr3" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Tr3" %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <title>TabRetailNew</title>
     <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+
+  	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<%= render 'shared/nav' %>
+			    <%= yield %>
+
+			</div>
+		</div>
+	</div>
+
+<%= js add_gritter(flash[:notice], title: "Tab Retail App Notification", sticky: false) %>
   </body>
 </html>

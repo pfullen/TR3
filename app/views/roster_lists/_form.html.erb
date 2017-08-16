@@ -1,0 +1,15 @@
+
+
+<%= simple_form_for [@roster, @roster_list] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+   
+
+    <%= f.association :employee, label_method: :full_name%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

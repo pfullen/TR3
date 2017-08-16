@@ -1,0 +1,62 @@
+
+Roster info
+
+<%  @check_for_nil = @roster.roster_lists.all.inspect  %>
+
+<% @next_roster_id  = @roster.roster_lists.first.roster_id + 1 %>
+
+<% @roster_lists = RosterList.where(:roster_id => @next_roster_id) %>
+
+# <%  if @roster_lists.exists?  %>
+
+    <p>  List needs to be updated <p>
+
+ 
+
+     <% @roster.roster_lists.each do |roster_list| %>
+
+        <% roster_list.roster_id = roster_list.roster_id + 1 %> 
+
+        <%= roster_list.inspect %>
+
+
+        <% end %>  
+
+
+ 
+
+
+
+
+
+
+    
+ <% else %> 
+
+ 	<p> list needs to be created  </p>
+
+
+
+  
+     <% @roster.roster_lists.each do |roster_list| %>
+
+        <% roster_list.roster_id = roster_list.roster_id + 1 %> 
+
+        <%= roster_list.inspect %>
+
+
+        <% end %>  
+
+
+
+
+ 	<% end %> 
+
+
+
+
+ 
+
+
+
+

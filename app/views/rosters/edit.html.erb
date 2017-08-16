@@ -1,0 +1,16 @@
+<div class = "panel panel-primary">
+
+
+<div class="panel-heading">
+ Add & Edit Roster --->  Week of: <%= @roster.week.strftime('%m/%d/%Y') %> 
+  </div>
+
+
+
+	<div class="panel-body">
+	<%= render 'form', roster: @roster %>
+	<br>
+ <%= link_to 'Back',  project_path(@roster.project_id)%>
+	
+	</div> 
+</div

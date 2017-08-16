@@ -1,0 +1,3 @@
+class GcContact < Contact 
+end
+

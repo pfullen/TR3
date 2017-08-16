@@ -1,0 +1,33 @@
+
+  <thead>
+	    <tr>
+    	  <th>Name </th>
+	      <th> Phone </th>
+	      <th> Per Diem </th>
+	      <th> Expense Code </th>
+	      <th> Shift </th>
+	     </tr>
+ </thead>
+
+ <tbody>
+		  		<% roster.roster_lists.each do |list| %>
+
+				        <tr>
+				        	
+				        	<td> <%= list.employee.full_name %> </td>
+				        	<td> <%= list.employee.phone %> </td>
+
+				        	<td> <%= list.perdiem %> </td>
+				        	<td> <%= list.expense_code%> </td>
+				        	<td> <%= list.shift_id%> </td>
+
+				        </tr>
+				       
+
+
+							
+				        <% end %>
+				      
+
+				     
+				    </tbody>

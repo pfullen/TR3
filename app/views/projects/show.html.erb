@@ -1,0 +1,71 @@
+ <div class = "panel panel-primary ">
+ 
+
+
+<div class="panel-heading"> <h3> <%= @project.project_name %>  </h3> </div>
+
+	<div class="panel-body">
+	<button class = "btn btn-primary show-hide" > Show/Hide Rosters </button>
+
+
+<div class = "container">
+	<div class = "row" >
+        
+		<div class = "col-md-4 show">
+          <div class = "panel">
+			
+			 <div class = "panel-body">
+			 	<%= render 'project_info' %>
+
+			 </div>
+	          </div>
+			 </div>
+
+			 	<!-- Start of Roster Info  -->
+			 
+		 <div class = "col-md-8 roster_info">
+
+		 	<div class = "panel panel-roster">
+			 <div class = "panel-body roster-info-table ">
+		 		
+				
+					<%= render 'project_roster_info' %>
+                                             
+				
+			
+			</div>
+			</div>
+
+		 </div>
+		 	<!-- End of Roster Info  -->
+
+		 	<!-- Start of shift containers -->
+		 	 <div class = "col-md-8 shift-containers shift-info">
+
+		 	<div class = "panel panel-roster">
+			 <div class = "panel-body ">
+			
+		 	
+					<%= render 'project_shifts' %>
+                                             
+				
+		
+			</div>
+			</div>
+
+		 </div>
+
+      
+
+		 	<!-- End of shift containers -->  
+
+
+ 
+</div>
+
+</div>
+
+
+    
+
+

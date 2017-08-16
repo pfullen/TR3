@@ -13,3 +13,243 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
+
+@import "bootstrap-sprockets"; 
+ $output-bourbon-depreciation-warnings: false;
+
+@import "bootstrap";
+
+
+@import "gritter";
+@import "bourbon";
+
+@import "bootstrap-datepicker";
+
+.custom-nav {
+	
+ margin-top: 15px;
+
+}
+
+
+
+
+
+
+.show-header {
+	height: 50px;
+	width: 100%;
+	color: #fff;
+	background: #365ebf;
+	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
+	text-align: center;
+	font: 18px;
+	font-weight: bold;
+	padding-top: 15px;
+	}
+
+
+
+.container{
+	height: 100%;
+}
+
+.jumbotron  {
+height: 100%;
+}
+
+.show-body {
+height: 100%;
+border: .5px solid black;
+}
+
+
+.show-body p {
+font-size: 12px;
+}
+
+
+
+.form-panel.project {
+	margin-top: 10px;
+	width: 40%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+
+.panel-roster {
+width: 80%;
+	
+}
+
+
+
+
+.container-sorted {
+	width: 40%;
+
+}
+
+
+.panel {
+	margin: 10px;
+}
+
+.proj-details {
+	font-size: 10px;
+}
+
+.tabel-details {
+	font-size: 10px;
+	;
+}
+
+.panel-details {
+	min-height: 350px;
+}
+
+
+.shift-containers.shift-info  {
+	display: none;
+
+}
+
+.shift-heading {
+	background-color: green;
+	color: white;
+}
+
+.shift-heading {
+	background-color: green;
+	
+	
+}
+
+.week-heading {
+background-color :darkorange;
+	
+}
+
+.shift-body {
+
+	border: solid 1px green;
+	
+}
+
+.project_panel {
+
+	width: 30%;
+	marging-right: 50px;
+}
+
+.shift-container {
+	width: 60%;
+	margin-right: 20px;
+}
+
+.panel-roster {
+	margin-right: 25px;
+}
+
+
+.panel.panel-primary.project-panel {
+	
+	margin-right: 100px;
+}
+
+#roster-header {
+	background-color:  #337ab7;
+	color: white;
+	width: 100%;
+
+}
+
+.roster {
+	
+}
+
+.roster-glyphicon {
+	
+	color: white;
+}
+
+.roster-detail-info {
+	
+	font-size: 12px;
+	padding: 15px;
+}
+
+
+.roster-info-table {
+	
+width: 100%;
+border: solid 1px #337ab7;
+padding: 0;
+margin: 0; 
+
+
+}
+
+td  {
+	padding: 10px;
+}
+
+th { 
+padding: 10px;
+padding-left: 0;
+
+}
+
+.shift-info-data {
+	
+	font-color: black;
+
+	
+background-color: green;
+padding-bottom: 0;
+
+}
+
+
+
+
+
+
+#term {
+	
+	width: 30%;
+}
+
+.navigation__link {
+	
+
+}
+
+td.project-table {
+
+font-size: 10px;
+	
+
+}
+
+
+th.datepicker-switch
+{
+	
+	background-color:  #1975ED;
+	color: white;
+
+}
+
+th.datepicker-switch:hover  {
+	background-color:  #1975ED;
+	color: white;
+
+}

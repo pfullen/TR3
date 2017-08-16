@@ -1,0 +1,32 @@
+<%= simple_form_for @roster do |f| %>
+ <div class "form-inputs">
+<p > <%= @roster.project.project_name  %>   </p>
+ 
+   </div>
+
+    <table class = "table table-striped table-hover" >
+      <thead>
+        <tr>
+          <th> </th>
+          <th>Name </th>
+          <th>Per Diem </th>
+          <th>Expense Code </th>
+          <th> Shift </th>
+        </tr>
+      </thead>
+
+      <tbody class = "employees">
+           <%= f.fields_for :roster_lists do |builder| %>
+           <%= render 'roster_list_fields', f: builder %>
+        <% end %>
+</tbody>
+</table>
+
+<div class = "form-action">
+    <%= f.submit "Submit" %>
+    <%= link_to_add_association 'Add Employee', f, :roster_lists, class: 'btn btn-primary', data: {
+      association_insertion_node: '.employees', association_insertion_method: :append  } %>
+  </div>
+<% end %>
+
+

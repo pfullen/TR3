@@ -1,0 +1,94 @@
+     
+
+
+  <% @project.rosters.each do |roster| %>
+       <% @shift_count = 0 %>   
+
+<div class = "panel panel-primary  project-panel">
+
+
+           <div class="panel-heading week-heading">Week:  <%= roster.week.strftime('%m/%d/%y') %>  </div>
+           <div class="panel-body shift-info1">
+
+
+         <% @project.num_of_shifts.times do   %>
+
+                <% @shift_count = @shift_count + 1  %>
+              
+
+              
+
+      <div class="panel-heading shift-heading "> <h4> Shift: <%= @shift_count %> </h4> 
+      <table class ="table  " >
+
+<tr>
+      <thead>
+       <th>   Days </th>
+       
+        <th>  Hours </th>
+        
+        <th> # of People </th>
+      </thead>
+    </tr>     
+
+      <tbody class = "shift-info-data" >
+        <tr >
+            <td> Mon - Friday  </td>
+            <td> 7am - 5pm  </td>
+            <td> 5 </td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+
+                <div class = "shift-body">
+
+                    <table class = "table table ">
+                        
+                         
+  <thead>
+      <tr>
+        <th>Name </th>
+        <th> Phone </th>
+        <th>  </th>
+       
+       </tr>
+ </thead>
+
+ <tbody>
+      <% # roster.roster_lists.each do |list| %>
+      <% roster.roster_lists.each do |list|     %>
+
+
+      <%  if list.shift_id == @shift_count %>
+            <tr>
+                  
+              <td> <%= list.employee.full_name %> </td>
+              <td> <%= list.employee.phone %> </td>
+              <td> <%= list.expense_code %>  </td>
+            
+
+            </tr>
+            <% end %>
+          
+    <% end %>
+                         
+   </tbody>
+                                                             
+                        
+                      </table>                  
+
+                   </div>
+                
+              <% end %>  
+           
+              </div>
+              
+            </div>
+            <br>
+            <br>
+            
+
+
+
+<% end %>

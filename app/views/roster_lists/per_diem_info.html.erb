@@ -1,0 +1,47 @@
+
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Per Diem Report </h1>
+
+<%= form_tag(per_diem_info_path , method: :get) do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+
+
+
+<table class = "table table-striped table-hover">
+  <thead>
+    <tr>
+     
+      <th> Week </th>
+      <th>Employee</th>
+      <th> Per Diem </th>
+      <th> Note </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roster_lists.each do |roster_list| %>
+      <tr>
+       
+       	<td><%= roster_list.roster.week %></td>
+        <td><%= roster_list.employee.full_name %></td>
+        <td><%= roster_list.perdiem %></td>
+		<td><%= roster_list.employee.full_name %></td>
+
+
+        <td><%= link_to 'Show', roster_list %></td>
+        <td><%= link_to 'Edit', edit_roster_list_path(roster_list) %></td>
+        <td><%= link_to 'Destroy', roster_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roster List', new_roster_list_path %>

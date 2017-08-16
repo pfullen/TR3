@@ -1,0 +1,25 @@
+
+
+<%= simple_form_for @roster do |f| %>
+ 
+ <%= f.input :project_id %>
+ <%= f.label :week %>
+ <%= f.text_field  :week , class: 'datepicker' %>
+   
+
+    <%= 3.times do %>
+
+   <%= f.fields_for :roster_lists , RosterList.new do |builder| %>
+
+   <p> 
+   	
+
+   		<%= builder.association :employee, label_method: :full_name %>
+
+</p>
+    <% end %>
+
+   <% end %> 
+
+    <%= f.submit "Submit" %>
+<% end %>

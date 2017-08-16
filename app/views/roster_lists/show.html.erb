@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Roster:</strong>
+  <%= @roster_list.roster.id %>
+</p>
+
+<p>
+  <strong>Roster:</strong>
+  <%= @roster_list.roster.project_id %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @roster_list.employee.full_name %>
+</p>
+
+<%= link_to 'Edit', edit_roster_list_path(@roster_list) %> |
+<%= link_to 'Back', roster_lists_path %>
