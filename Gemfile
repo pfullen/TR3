@@ -51,6 +51,7 @@ gem 'administrate'
 gem 'bourbon'
 gem 'cocoon'
 gem 'bootstrap-datepicker-rails', '~>1.6.4.1'
+gem 'jquery-turbolinks'
 
 gem 'rails_12factor' , group: :production
 gem 'faker' , group: :production 
