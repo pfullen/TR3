@@ -3,6 +3,7 @@
 	
 </div> 
 
+<% if current_user %>
 
 <ul class="custom-nav nav nav-tabs">
 	<li class="<%= active?(root_path) %>">
@@ -207,3 +208,5 @@
 		</ul>
 	</li>
 </ul>
+
+<% end %> 
