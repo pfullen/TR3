@@ -31,12 +31,10 @@
        	<td><%= roster_list.roster.week %></td>
         <td><%= roster_list.employee.full_name %></td>
         <td><%= roster_list.perdiem %></td>
-		<td><%= roster_list.employee.full_name %></td>
+	
 
 
-        <td><%= link_to 'Show', roster_list %></td>
-        <td><%= link_to 'Edit', edit_roster_list_path(roster_list) %></td>
-        <td><%= link_to 'Destroy', roster_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       
       </tr>
     <% end %>
   </tbody>
@@ -44,4 +42,3 @@
 
 <br>
 
-<%= link_to 'New Roster List', new_roster_list_path %>
