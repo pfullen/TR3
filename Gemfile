@@ -55,3 +55,10 @@ gem 'jquery-turbolinks'
 
 gem 'rails_12factor' , group: :production
 gem 'faker' , group: :production 
+
+
+
+group :development do
+  gem 'rails_real_favicon'
+end
+

@@ -18,7 +18,11 @@ By default, it renders:
   <meta charset="utf-8">
   <meta name="ROBOTS" content="NOODP">
   <meta name="viewport" content="initial-scale=1">
-  <%= favicon_link_tag 'tab.ico' %>
+
+
+<%= favicon_link_tag  %>
+
+
   <title>
     <%= content_for(:title) %> - <%= Rails.application.class.parent_name.titlecase %>
   </title>
@@ -28,6 +32,7 @@ By default, it renders:
 </head>
 <body>
   <%= render "icons" %>
+  <%= render 'application/favicon' %>
 
   <div class="app-container">
     <%= render "navigation" -%>
