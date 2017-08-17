@@ -15,15 +15,15 @@ end
 
 
 def create
-		@project_type = ProjectType.new(project_type_params)
+	#	@project_type = ProjectType.new(project_type_params)
  end 
 
 	    
-if @project.save
-			redirect_to @project_type, notice: 'Project Type was created successfully'
-		else
-			render :new
-		end
+#if @project_type.save
+		#	redirect_to @project_type, notice: 'Project Type was created successfully'
+	#	else
+	#		render :new
+	#	end
 end
 
 
